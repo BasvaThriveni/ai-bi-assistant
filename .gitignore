@@ -1,0 +1,13 @@
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+*.sqlite3
+.DS_Store
+
+# API keys and secrets
+rsg.txt
+.env
+.env.*
+*.key
+secrets.*

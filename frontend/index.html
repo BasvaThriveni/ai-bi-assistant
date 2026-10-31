@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AI Business Intelligence Assistant</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header class="topbar">
+        <div>
+          <p class="eyebrow">Sales analytics</p>
+          <h1>AI Business Intelligence Assistant</h1>
+        </div>
+      </header>
+
+      <section class="intro">
+        <p>
+          Ask natural-language questions about sales performance and receive
+          answers backed by database calculations.
+        </p>
+      </section>
+
+      <section class="panel question-panel">
+        <label for="questionInput">Ask a business question</label>
+        <div class="question-row">
+          <input id="questionInput" type="text" placeholder="What is the total revenue?" />
+          <button id="askButton">Ask</button>
+        </div>
+        <div class="suggestions">
+          <button class="suggestion">What is the total revenue?</button>
+          <button class="suggestion">Which product generated the highest revenue?</button>
+          <button class="suggestion">What is the monthly revenue trend?</button>
+          <button class="suggestion">Which region generated the highest sales?</button>
+          <button class="suggestion">Compare January and February.</button>
+        </div>
+        <div id="loading" class="loading hidden">Processing your question...</div>
+      </section>
+
+      <section class="panel answer-panel">
+        <h2>Answer</h2>
+        <div id="answerText" class="answer-text">Your analysis will appear here.</div>
+        <div id="methodology" class="methodology"></div>
+      </section>
+
+      <section class="panel data-panel">
+        <h2>Supporting figures</h2>
+        <div id="supportingFigures" class="supporting-figures"></div>
+      </section>
+
+      <section class="panel chart-panel">
+        <h2>Monthly revenue trend</h2>
+        <div class="chart-wrap">
+          <canvas id="revenueChart" width="800" height="260"></canvas>
+        </div>
+      </section>
+
+      <section class="panel error-panel hidden" id="errorPanel">
+        <h2>Error</h2>
+        <div id="errorMessage"></div>
+      </section>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
