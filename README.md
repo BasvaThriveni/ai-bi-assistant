@@ -344,11 +344,9 @@ Calculates the total net revenue generated from eligible completed transactions.
 
 **Formula:**
 
-$$
-\text{Total Revenue}
-=
-\sum \text{Net Transaction Revenue}
-$$
+**Formula:**
+
+`Total Net Revenue = SUM(Net Transaction Revenue)`
 
 Displays:
 
@@ -399,23 +397,15 @@ Compares revenue between two selected months.
 
 **Absolute Difference:**
 
-$$
-\text{Difference}
-=
-\text{Revenue}_{2}
--
-\text{Revenue}_{1}
-$$
+**Difference:**
+
+`Revenue Difference = Revenue in Month 2 − Revenue in Month 1`
 
 **Percentage Change:**
 
-$$
-\text{Percentage Change}
-=
-\frac{\text{Revenue}_{2}-\text{Revenue}_{1}}
-{\text{Revenue}_{1}}
-\times 100
-$$
+**Percentage Change:**
+
+`Percentage Change = ((Revenue in Month 2 − Revenue in Month 1) / Revenue in Month 1) × 100`
 
 The result indicates whether revenue increased, decreased or remained unchanged.
 
