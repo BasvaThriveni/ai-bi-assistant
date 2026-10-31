@@ -8,6 +8,7 @@ from pathlib import Path
 
 from backend.ai_service import ask_question
 from backend.database import get_summary, init_db
+from backend.data_loader import import_sales_csv
 from backend.models import QuestionRequest
 
 BASE_DIR = Path(__file__).resolve().parents[1]
@@ -27,6 +28,8 @@ app.add_middleware(
 @app.on_event("startup")
 def startup_event() -> None:
     init_db()
+    if get_summary()["total_records"] == 0:
+        import_sales_csv()
 
 
 @app.get("/health")
